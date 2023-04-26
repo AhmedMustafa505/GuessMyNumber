@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   numberText: {
     color: Colors.secondary,
-    fontSize: 36,
+    fontSize: width < 380 ? 25 : 36,
     fontFamily: "open-sans-bold",
   },
 });

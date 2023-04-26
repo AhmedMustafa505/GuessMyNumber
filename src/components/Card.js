@@ -7,14 +7,13 @@ function Card({ children }) {
 }
 
 const { width } = Dimensions.get("window");
-
 const styles = StyleSheet.create({
   inputContainer: {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
     marginHorizontal: 20,
-    marginTop: width < 380 ? 15 : 30,
+    marginTop: width < 370 ? 20 : 15,
     backgroundColor: Colors.primary700,
     borderRadius: 8,
     elevation: 4,
@@ -22,6 +21,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 5,
     shadowOpacity: 0.5,
+    maxWidth: "80%",
+    width: 300,
   },
 });
 

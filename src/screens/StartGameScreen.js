@@ -6,6 +6,7 @@ import {
   Pressable,
   Alert,
   Text,
+  Dimensions,
 } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import Colors from "../util/colors";
@@ -64,36 +65,22 @@ function StartGameScreen({ onPickNumber }) {
     </View>
   );
 }
-
+const { width } = Dimensions.get("window");
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 100,
     alignItems: "center",
   },
-  inputContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 16,
-    marginHorizontal: 20,
-    marginTop: 30,
-    backgroundColor: Colors.primary700,
-    borderRadius: 8,
-    elevation: 4,
-    shadowColor: "black",
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 5,
-    shadowOpacity: 0.5,
-  },
   numberInput: {
-    height: 50,
-    fontSize: 32,
+    height: width < 370 ? 40 : 50,
+    fontSize: width < 370 ? 28 : 32,
     borderBottomColor: Colors.secondary,
     borderBottomWidth: 2,
     color: Colors.secondary,
     marginVertical: 8,
     fontWeight: "bold",
-    width: 50,
+    width: width < 370 ? 40 : 50,
     textAlign: "center",
     alignSelf: "center",
   },

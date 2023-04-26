@@ -77,7 +77,6 @@ function GameScreen({ userNumber, onGameOver }) {
     <SafeAreaView style={styles.container}>
       <Title>Opponent's Guess</Title>
       <NumberContainer>{currentGuess}</NumberContainer>
-
       <Card>
         <InstructionText style={styles.instructionStyle}>
           Higher or Lower ?
